@@ -17,7 +17,7 @@ namespace WebAppSistemaControleCinema.Controllers
         // GET: Sessao
         public ActionResult Index()
         {
-            return View(db.Sessaos.ToList());
+            return View(db.Sessao.ToList());
         }
 
         // GET: Sessao/Details/5
@@ -27,7 +27,7 @@ namespace WebAppSistemaControleCinema.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Sessao sessao = db.Sessaos.Find(id);
+            Sessao sessao = db.Sessao.Find(id);
             if (sessao == null)
             {
                 return HttpNotFound();
@@ -50,7 +50,7 @@ namespace WebAppSistemaControleCinema.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Sessaos.Add(sessao);
+                db.Sessao.Add(sessao);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -65,7 +65,7 @@ namespace WebAppSistemaControleCinema.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Sessao sessao = db.Sessaos.Find(id);
+            Sessao sessao = db.Sessao.Find(id);
             if (sessao == null)
             {
                 return HttpNotFound();
@@ -96,7 +96,7 @@ namespace WebAppSistemaControleCinema.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Sessao sessao = db.Sessaos.Find(id);
+            Sessao sessao = db.Sessao.Find(id);
             if (sessao == null)
             {
                 return HttpNotFound();
@@ -109,8 +109,8 @@ namespace WebAppSistemaControleCinema.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Sessao sessao = db.Sessaos.Find(id);
-            db.Sessaos.Remove(sessao);
+            Sessao sessao = db.Sessao.Find(id);
+            db.Sessao.Remove(sessao);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

@@ -19,7 +19,7 @@ namespace WebAppSistemaControleCinema.Models
         {
         }
 
-        public System.Data.Entity.DbSet<WebAppSistemaControleCinema.Models.Sessao> Sessaos { get; set; }
+        public System.Data.Entity.DbSet<WebAppSistemaControleCinema.Models.Sessao> Sessao { get; set; }
 
         public System.Data.Entity.DbSet<WebAppSistemaControleCinema.Models.Ator> Ators { get; set; }
 
